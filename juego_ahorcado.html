@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Juego de letras</title>
+=======
+    <title>Juego del Ahorcado</title>
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Fuente manuscrita -->
     <script>
         // Lista de palabras con sus respectivas categorías (temas)
         const temas = {
+<<<<<<< HEAD
             "Ciudades": ["MEDELLIN","CALI","PEREIRA","CARTAGENA","POPAYAN","IBAGUE","CUCUTA","SOLEDAD"],
             "Tecnologia": ["ANIMACION","COMPUTADORA", "PROGRAMACION","CONOCIMIENTO","INNOVACION","INVENCION"],
             "Profesiones": ["CONTADOR", "MEDICO", "ABOGADO", "INGENIERO","ARQUITECTO"],
             "Animales":["ESCORPION","ELEFANTE","CABALLO","GATO","TIGRE","LEON","MURCIELAGO","TIBURON"],
             "Departamentos De Colombia":["AMAZONAS","ANTIOQUIA","ARAUCA","CALDAS","ATLANTICO","CASANARE","CESAR","CHOCO","CORDOBA","CUNDINAMARCA"],
+=======
+            "Ciudades": ["MEDELLIN","CALI","PEREIRA","CARTAGENA","POPAYAN"],
+            "Tecnologia": ["ANIMACION","COMPUTADORA", "PROGRAMACION"],
+            "Profesiones": ["CONTADOR", "MEDICO", "ABOGADO", "INGENIERO","ARQUITECTO"],
+            "Animales":["ESCORPION","ELEFANTE","CABALLO","GATO","TIGRE","LEON","MURCIELAGO","TIBURON"],
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
         };
 
         let palabraSeleccionada = '';
@@ -22,8 +33,13 @@
         let intentos = 6;
         let temaSeleccionado = '';
 
+<<<<<<< HEAD
         const gifsCorrectos = ["img/bien_hecho.gif", "img/aplausos.gif", "img/homer-simpson-icegif-10.gif","img/minius.webp"];
         const gifsIncorrectos = ["img/no_acert.gif", "img/no-no-no.gif", "img/casi_acert.gif"];
+=======
+        const gifsCorrectos = ["a0e8cce5296302f25dbc178d91626d47.gif", "aplausos.gif", "homer-simpson-icegif-10.gif"];
+        const gifsIncorrectos = ["no-no-no.gif", "M3gMmi6.gif", "200w.gif"];
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
 
         function iniciarJuego() {
             // Seleccionar aleatoriamente un tema y una palabra dentro de ese tema
@@ -38,7 +54,11 @@
             document.getElementById("intentos").innerText = `Intentos restantes: ${intentos}`;
             mostrarPalabra();
             document.getElementById("reiniciar").style.display = 'none';
+<<<<<<< HEAD
             
+=======
+            document.getElementById("muñeco").src = '';
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
             document.getElementById("gifResultado").style.display = 'none';
 
             // Mostrar tema en la interfaz
@@ -48,7 +68,11 @@
             const nombreUsuario = localStorage.getItem('nombreUsuario');
             const generoUsuario = localStorage.getItem('generoUsuario');
             if (nombreUsuario) {
+<<<<<<< HEAD
                 const saludo = `Hola. Buena suerte, ${nombreUsuario}`;  // Cambié "Bienvenido" por "Hola"
+=======
+                const saludo = `Hola. suerte, ${nombreUsuario}`;  // Cambié "Bienvenido" por "Hola"
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
                 document.getElementById("bienvenida").innerText = saludo;
             }
         }
@@ -79,6 +103,10 @@
                 } else {
                     letrasIncorrectas.push(inputLetra);
                     intentos--;
+<<<<<<< HEAD
+=======
+                    document.getElementById("muñeco").src = `img/trump-draw-${6 - intentos}.png`;
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
                     const randomIncorrectGif = gifsIncorrectos[Math.floor(Math.random() * gifsIncorrectos.length)];
                     document.getElementById("gifResultado").src = randomIncorrectGif; 
                     document.getElementById("gifResultado").style.display = 'block';
@@ -90,6 +118,7 @@
 
                 if (intentos === 0) {
                     document.getElementById("resultado").innerText = `¡Perdiste! La palabra era "${palabraSeleccionada}"`;
+<<<<<<< HEAD
                     document.getElementById("gifResultado").src = "img/gato tom.gif"; 
                     document.getElementById("gifResultado").style.display = 'block';
                     document.getElementById("reiniciar").style.display = 'block';
@@ -100,6 +129,14 @@
 
                     document.getElementById("resultado").innerText = '¡Ganaste!';
                     document.getElementById("gifResultado").src = "img/trump-draw.gif"; 
+=======
+                    document.getElementById("gifResultado").src = "gato tom.gif"; 
+                    document.getElementById("gifResultado").style.display = 'block';
+                    document.getElementById("reiniciar").style.display = 'block';
+                } else if (palabraSeleccionada.split('').every(letra => letrasCorrectas.includes(letra))) {
+                    document.getElementById("resultado").innerText = '¡Ganaste!';
+                    document.getElementById("gifResultado").src = "trump-draw.gif"; 
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
                     document.getElementById("gifResultado").style.display = 'block';
                     document.getElementById("reiniciar").style.display = 'block'; // Mostrar botón de reiniciar
                 }
@@ -108,11 +145,15 @@
 
         function reiniciarJuego() {
             iniciarJuego(); // Reiniciar el juego
+<<<<<<< HEAD
             document.body.style.backgroundImage = ''; // Restablecer el fondo al original
+=======
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
         }
 
         window.onload = iniciarJuego;
     </script>
+<<<<<<< HEAD
    <style>
     body {
         font-family: Arial, sans-serif;
@@ -194,6 +235,126 @@
 </head>
 <body>
     <h1>Juego de palabras</h1>
+=======
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            text-align: center;
+            position: relative; 
+            overflow: hidden; 
+            height: 100vh;
+            background-image: url('fondo.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            color: #fff;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        button {
+            background-color: rgb(17, 20, 68);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 1em;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.4s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #565c06;
+            transform: scale(1.05);
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 1em;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin: 8px;
+            width: 50%;
+            max-width: 250px; /* Max width para dispositivos grandes */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #palabra, #intentos, #resultado, #tema {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 30px;
+            transition: transform 0.2s;
+        }
+
+        img#muñeco, img#gifResultado {
+            max-width: 250px; /* Máxima anchura de las imágenes en móviles */
+            width: 80%; /* Hacer que las imágenes se adapten al 80% del ancho disponible */
+            max-height: 350px; /* Limitar la altura máxima */
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px; 
+            }
+
+            button {
+                width: 100%; 
+                padding: 12px;
+                font-size: 1.1em;
+            }
+
+            input[type="text"] {
+                width: 90%;  /* Aumentar el ancho del input */
+                padding: 10px;
+            }
+
+            #palabra {
+                font-size: 1.5em; /* Reducir tamaño de la palabra */
+            }
+
+            #intentos, #resultado {
+                font-size: 1.2em; /* Reducir tamaño de los textos de intentos y resultado */
+            }
+
+            img#muñeco, img#gifResultado {
+                max-width: 200px; /* Reducir el tamaño de las imágenes */
+                height: auto;
+            }
+        }
+
+        /* Estilos para el Footer */
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-family: 'Pacifico', cursive;
+            font-size: 18px;
+            color: #fff;
+            letter-spacing: 5px; /* Espaciado entre las letras */
+        }
+    </style>
+</head>
+<body>
+    <h1>Juego del Ahorcado</h1>
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
     <div id="bienvenida"></div>
     <div id="tema"></div> <!-- Aquí se mostrará el tema del juego -->
     <div id="palabra"></div>
@@ -203,6 +364,10 @@
     <div id="resultado"></div>
     <button id="reiniciar" style="display: none;" onclick="reiniciarJuego()">Iniciar de nuevo</button>
     
+<<<<<<< HEAD
+=======
+    <img id="muñeco" src="" alt="" />
+>>>>>>> e2b5be1ab31baf3d53ff9781ea0504988f622ef9
     <img id="gifResultado" src="" alt="Resultado del Juego" style="display: none;" />
 
     <!-- Footer -->
